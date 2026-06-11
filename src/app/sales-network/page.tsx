@@ -34,7 +34,7 @@ const fallbackDealers: Dealer[] = [
     state: 'Delhi',
     city: 'New Delhi',
     dealerName: 'Capital Ayurvedic Agency',
-    phone: '+91 7058405811',
+    phone: '+91 93079 04425',
     address: 'Shop No. 12, Block C, Lajpat Nagar-II, New Delhi – 110024'
   },
   {

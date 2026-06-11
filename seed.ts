@@ -46,15 +46,25 @@ async function seed() {
     await SalesNetwork.deleteMany({});
     console.log('Cleared existing collections.');
 
-    // 2. Create Admin User
-    const admin = await User.create({
-      name: 'Dr. Nidan Admin',
-      email: 'admin@drnidan.com',
-      password: 'Admin@123',
-      role: 'admin',
-      isVerified: true
-    });
-    console.log('Admin user seeded:', admin.email);
+    // 2. Create Admin Users
+    const adminAccounts = [
+      { email: 'admin@drnidan.com', name: 'Dr. Nidan Admin', pass: 'Admin@123' },
+      { email: 'MD@drnidan.in', name: 'Dr. Nidan MD', pass: 'NidanMD@2026' },
+      { email: 'HR@drnidan.in', name: 'Dr. Nidan HR', pass: 'NidanHR@2026' },
+      { email: 'Logistics@drnidan.in', name: 'Dr. Nidan Logistics', pass: 'NidanLogistics@2026' },
+      { email: 'Sales@drnidan.in', name: 'Dr. Nidan Sales', pass: 'NidanSales@2026' }
+    ];
+
+    for (const acc of adminAccounts) {
+      await User.create({
+        name: acc.name,
+        email: acc.email,
+        password: acc.pass,
+        role: 'admin',
+        isVerified: true
+      });
+      console.log('Admin user seeded:', acc.email);
+    }
 
     // Create a regular test user as well
     const testUser = await User.create({
@@ -400,7 +410,7 @@ async function seed() {
         state: 'Delhi',
         city: 'New Delhi',
         dealerName: 'Capital Ayurvedic Agency',
-        phone: '+91 7058405811',
+        phone: '+91 93079 04425',
         address: 'Shop No. 12, Block C, Lajpat Nagar-II, New Delhi – 110024',
         isActive: true
       },

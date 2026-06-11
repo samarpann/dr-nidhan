@@ -66,7 +66,7 @@ export default function ContactPage() {
             <span>WhatsApp Us</span>
           </a>
           <a
-            href="mailto:info@drnidan.com"
+            href="mailto:MD@drnidan.in"
             className="flex items-center justify-center space-x-3 p-5 bg-white border border-[#2E7D32]/10 hover:border-[#2E7D32]/40 rounded-xl shadow-xs hover:shadow-sm transition-all text-[#2E7D32] font-semibold"
           >
             <Mail className="w-5 h-5" />
@@ -99,7 +99,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold text-[#1A1A1A] mb-1">Phone Numbers</h3>
                     <p className="leading-relaxed">+91 93079 04425</p>
-                    <p className="leading-relaxed text-xs text-gray-400 font-medium">+91 7058105880 | +91 7058405811</p>
+                    <p className="leading-relaxed text-xs text-gray-400 font-medium">+91 7058105880</p>
                   </div>
                 </div>
 
@@ -107,7 +107,12 @@ export default function ContactPage() {
                   <Mail className="w-6 h-6 text-[#2E7D32] shrink-0 mt-0.5" />
                   <div>
                     <h3 className="font-bold text-[#1A1A1A] mb-1">Email</h3>
-                    <a href="mailto:info@drnidan.com" className="text-[#2E7D32] hover:underline font-semibold">info@drnidan.com</a>
+                    <div className="flex flex-col space-y-1">
+                      <a href="mailto:MD@drnidan.in" className="text-[#2E7D32] hover:underline font-semibold">MD@drnidan.in</a>
+                      <a href="mailto:HR@drnidan.in" className="text-[#2E7D32] hover:underline font-semibold">HR@drnidan.in</a>
+                      <a href="mailto:Logistics@drnidan.in" className="text-[#2E7D32] hover:underline font-semibold">Logistics@drnidan.in</a>
+                      <a href="mailto:Sales@drnidan.in" className="text-[#2E7D32] hover:underline font-semibold">Sales@drnidan.in</a>
+                    </div>
                   </div>
                 </div>
               </div>

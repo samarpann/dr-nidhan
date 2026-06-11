@@ -66,12 +66,17 @@ export function Footer() {
                 <Phone className="w-5 h-5 text-[#66BB6A] shrink-0 mt-0.5" />
                 <div className="flex flex-col">
                   <span>+91 93079 04425</span>
-                  <span>+91 7058105880 | +91 7058405811</span>
+                  <span>+91 7058105880</span>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-[#66BB6A] shrink-0" />
-                <a href="mailto:info@drnidan.com" className="hover:text-white transition-colors">info@drnidan.com</a>
+                <div className="flex flex-col space-y-1">
+                  <a href="mailto:MD@drnidan.in" className="hover:text-white transition-colors">MD@drnidan.in</a>
+                  <a href="mailto:HR@drnidan.in" className="hover:text-white transition-colors">HR@drnidan.in</a>
+                  <a href="mailto:Logistics@drnidan.in" className="hover:text-white transition-colors">Logistics@drnidan.in</a>
+                  <a href="mailto:Sales@drnidan.in" className="hover:text-white transition-colors">Sales@drnidan.in</a>
+                </div>
               </div>
             </div>
           </div>
