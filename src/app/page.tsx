@@ -132,11 +132,11 @@ export default function Home() {
   ];
 
   const galleryImages = [
-    '/product image/nasha mukti.jpeg',
-    '/product image/eco cleanser.jpeg',
-    '/product image/horse rider gold.jpeg',
-    '/product image/andhera.jpeg',
-    '/product image/slimkaya.jpeg'
+    '/product image -2/nasha mukti.jpeg',
+    '/product image -2/eco cleanse.jpeg',
+    '/product image -2/horse rider gold .jpeg',
+    '/product image -2/aandra.jpeg',
+    '/product image -2/slimkaya.jpeg'
   ];
 
   const steps = [
@@ -243,7 +243,7 @@ export default function Home() {
                 className="lg:col-span-5 aspect-[4/5] bg-white rounded-[var(--radius-lg)] overflow-hidden shadow-lg border border-gray-100 relative group p-6 flex items-center justify-center"
               >
                 <img
-                  src={product?.images?.[0]?.url || '/product image/nasha mukti.jpeg'}
+                  src={product?.images?.[0]?.url || '/product image -2/nasha mukti.jpeg'}
                   alt={product?.name || 'Nasha Mukti Drops'}
                   className="max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
                 />
@@ -312,7 +312,7 @@ export default function Home() {
                 <div className="flex flex-wrap gap-4 pt-4">
                   <button
                     onClick={() => {
-                      addToCart(product || { id: 'flagship', name: 'Dr. Nidan Nasha Mukti Drops 50 ML', slug: 'dr-nidan-nasha-mukti-drops-50ml', price: 799, images: ['/product image/nasha mukti.jpeg'] });
+                      addToCart(product || { id: 'flagship', name: 'Dr. Nidan Nasha Mukti Drops 50 ML', slug: 'dr-nidan-nasha-mukti-drops-50ml', price: 799, images: ['/product image -2/nasha mukti.jpeg'] });
                       alert('Added to Cart!');
                     }}
                     className="flex-1 min-w-[200px] py-4 bg-[#2E7D32] hover:bg-[#1B5E20] text-white font-semibold rounded-[var(--radius-md)] shadow-md transition-all hover:scale-[1.01]"

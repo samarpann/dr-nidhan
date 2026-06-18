@@ -36,7 +36,16 @@ export default function ProductsPage() {
             price: p.price,
             mrp: p.mrp,
             shortDescription: p.shortDescription,
-            images: p.images || [],
+            images: (p.images || []).map((img: any) => {
+              let url = img.url;
+              if (url.includes('/product image/')) {
+                url = url.replace('/product image/', '/product image -2/')
+                         .replace('andhera.jpeg', 'aandra.jpeg')
+                         .replace('eco cleanser.jpeg', 'eco cleanse.jpeg')
+                         .replace('horse rider gold.jpeg', 'horse rider gold .jpeg');
+              }
+              return { ...img, url };
+            }),
             category: p.category || 'Herbal Drops'
           })));
         }
@@ -127,7 +136,7 @@ export default function ProductsPage() {
                 <Link href={`/products/${product.slug}`} className="block p-5">
                   <div className="relative aspect-square rounded-xl overflow-hidden bg-[#F9FFF9] mb-4 flex items-center justify-center p-4 border border-gray-50">
                     <img 
-                      src={product.images?.[0]?.url || '/product image/nasha mukti.jpeg'} 
+                      src={product.images?.[0]?.url || '/product image -2/nasha mukti.jpeg'} 
                       alt={product.name} 
                       className="max-h-full object-contain group-hover:scale-103 transition-transform duration-500" 
                     />

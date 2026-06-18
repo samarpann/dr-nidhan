@@ -54,7 +54,16 @@ export default function ProductDetailPage() {
             mrp: data.mrp,
             stock: data.stock || 100,
             category: data.category || 'Herbal Drops',
-            images: data.images || [],
+            images: (data.images || []).map((img: any) => {
+              let url = img.url;
+              if (url.includes('/product image/')) {
+                url = url.replace('/product image/', '/product image -2/')
+                         .replace('andhera.jpeg', 'aandra.jpeg')
+                         .replace('eco cleanser.jpeg', 'eco cleanse.jpeg')
+                         .replace('horse rider gold.jpeg', 'horse rider gold .jpeg');
+              }
+              return { ...img, url };
+            }),
             keyStrengths: data.keyStrengths || [],
             ingredients: data.ingredients || [],
             benefits: data.benefits || [],
@@ -122,7 +131,7 @@ export default function ProductDetailPage() {
     );
   }
 
-  const mainImage = product.images?.[activeImageIndex]?.url || '/product image/nasha mukti.jpeg';
+  const mainImage = product.images?.[activeImageIndex]?.url || '/product image -2/nasha mukti.jpeg';
 
   return (
     <div className="pt-28 pb-24 bg-[#F9FFF9] min-h-screen text-[#1A1A1A]">
